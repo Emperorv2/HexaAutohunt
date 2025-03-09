@@ -1,8 +1,16 @@
 import logging
 
-  logging.basicConfig(
-      level=logging.INFO,
-      format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-  )
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 
-  logger = logging.getLogger(__name__)
+# Create a logger
+logger = logging.getLogger(__name__)
+
+def log(message):
+    """
+    Logs a message to the console.
+    """
+    logger.info(message)
